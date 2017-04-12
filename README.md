@@ -2,6 +2,8 @@
 
 ## Install Nodejs
 
+Go to the Node.JS web site and follow the installation rules for your operating system.
+
 ## Install CUPS
 
 ### Add a Network Printer:
@@ -21,8 +23,9 @@
 
 ## Create a shell script for each printer queue you want to print from
 
-For example: Create the file /home/cloudprn/cloudprn-standard.sh
-Adjust the settings for sbConnectionString, queueName and printer!
+For example: Create the file `/home/cloudprn/cloudprn-standard.sh`
+
+Adjust the settings for `sbConnectionString`, `queueName` and `printer`!
 
 ```
 #!/bin/bash
