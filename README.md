@@ -45,7 +45,7 @@ logfolder=/home/cloudprn/logs
 
 ## Create a service manifest for each printer (with sudo) 
 
-For example: Create the file /etc/systemd/system/cloudprn-standard.service
+For example: Create the file `/etc/systemd/system/cloudprn-standard.service`
 
 ```
 [Unit]
