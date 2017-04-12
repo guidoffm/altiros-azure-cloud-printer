@@ -41,7 +41,7 @@ logfolder=/home/cloudprn/logs
 ```
 ## Make each shell script executable
 
-`chmod +x cloudprn-standard`
+`chmod +x /home/cloudprn/cloudprn-standard.sh`
 
 ## Create a service manifest for each printer (with sudo) 
 
