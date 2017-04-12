@@ -13,8 +13,11 @@
 ## Create a user
 `sudo useradd -m cloudprn`
 
-sudo su - cloudprn
-npm i altiros-azure-cloud-printer
+## Login as new user
+`sudo su - cloudprn`
+
+## Install the npm package
+`npm i altiros-azure-cloud-printer`
 
 ## Create a shell script for each printer queue you want to print from
 
