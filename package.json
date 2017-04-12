@@ -1,0 +1,18 @@
+{
+  "name": "altiros-azure-cloud-printer",
+  "version": "1.1.0",
+  "description": "This module is used to get print data from an Azure service bus printer queue and forward to an IPP printer (cups)",
+  "main": "app.js",
+  "license": "MIT",
+  "author": {
+    "name": "Altiros GmbH",
+    "email": "restaurantkasse@altiros.de"
+  },
+  "dependencies": {
+    "azure": "^0.10.6",
+    "ipp": "^1.1.0"
+  },
+  "devDependencies": {
+  },
+  "homepage": "http://www.altiros.de/index.html#/cloudprinternode"
+}
