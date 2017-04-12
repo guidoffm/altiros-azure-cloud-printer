@@ -6,10 +6,14 @@ Go to the Node.JS web site and follow the installation rules for your operating 
 
 ## Install CUPS
 
-### Add a Network Printer:
+`sudo apt install cups`
+
+## Install all the printers you need in CUPS
+
+### For example: Add a Network Printer:
 `sudo lpadmin -p mynetworkprinter -E -v socket://192.168.0.10:9100`
 
-### Add a Dummy Printer:
+### For example: Add a Dummy Printer:
 `sudo lpadmin -p dummy -E -v file:///dev/null`
 
 ## Create a user
