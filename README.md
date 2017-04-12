@@ -60,5 +60,7 @@ WantedBy=multi-user.target
 ```
 
 ## Enable and start the services for each printer (with sudo) 
-sudo systemctl enable cloudprnr-standard
-sudo systemctl start cloudprnr-standard
+
+`sudo systemctl enable cloudprnr-standard`
+
+`sudo systemctl start cloudprnr-standard`
