@@ -1,4 +1,4 @@
-﻿# Altiros Azure Cloud Printer
+# Altiros Azure Cloud Printer
 
 ## Install Nodejs
 
@@ -53,11 +53,11 @@ For example: Create the file `/etc/systemd/system/cloudprn-standard.service`
 
 ```
 [Unit]
-Description=cloudprnr-standard
+Description=cloudprn-standard
 
 [Service]
 Type=forking
-User=cloudprnr
+User=cloudprn
 ExecStart=/home/cloudprn/cloudprn-standard.sh
 Restart=always
 RestartSec=3
@@ -68,6 +68,6 @@ WantedBy=multi-user.target
 
 ## Enable and start the services for each printer (with sudo) 
 
-`sudo systemctl enable cloudprnr-standard`
+`sudo systemctl enable cloudprn-standard`
 
-`sudo systemctl start cloudprnr-standard`
+`sudo systemctl start cloudprn-standard`
