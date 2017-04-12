@@ -1,8 +1,8 @@
 # Altiros Azure Cloud Printer
 
-## Install Nodejs
+## Install Node.js®
 
-Go to the Node.JS web site and follow the installation rules for your operating system.
+Go to the Node.js® web site https://nodejs.org and follow the installation rules for your operating system.
 
 ## Install CUPS
 
@@ -31,12 +31,15 @@ For example: Create the file `/home/cloudprn/cloudprn-standard.sh`
 
 Adjust the settings for `sbConnectionString`, `queueName` and `printer`!
 
+- Get the `sbConnectionString` and `queueName` values from Azure Portal https://portal.azure.com
+- For `printer` use the CUPS URL for the printer you want to use, e.g. use `http://localhost:631/printers/mynetworkprinter` when you have named your printer `mynetworkprinter`. This is the `-p` option for the `lpadmin` command when you have created your printer.
+
 ```
 #!/bin/bash
 
 export sbConnectionString='Endpoint=sb://xxxxxxxxxxxxxxxx.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxxxxxxxxx='
 export queueName='standard'
-export printer='http://localhost:631/printers/dummy'
+export printer='http://localhost:631/printers/mynetworkprinter'
 logfolder=/home/cloudprn/logs
 
 [ -d ${logfolder} ] || mkdir ${logfolder}
