@@ -21,13 +21,15 @@ Go to the Node.js® web site https://nodejs.org and follow the installation rule
 
 ## Run the Service with Docker
 
-`docker run -d \
+```
+docker run -d \
 -e sbConnectionString="Endpoint=sb://xxxxxxxxxxxxxxxx.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxxxxxxxxx=" \
 -e queueName=standarddrucker \
 -e printer='http://localhost:631/printers/dummy' \
 --restart always \
 --name altiros-azure-cloud-printer-standarddrucker \
-altiros/rpi-altiros-azure-cloud-printer`
+altiros/rpi-altiros-azure-cloud-printer
+```
 
 ## Run the Service without Docker
 
