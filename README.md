@@ -6,7 +6,7 @@ Go to the Node.js® web site https://nodejs.org and follow the installation rule
 
 ## Install CUPS
 
-`sudo apt install cups`
+`sudo apt-get update && sudo apt-get install cups`
 
 ## Install all the printers you need in CUPS
 
