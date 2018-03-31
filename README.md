@@ -13,6 +13,9 @@ Go to the Node.js® web site https://nodejs.org and follow the installation rule
 ### For example: Add a Network Printer:
 `sudo lpadmin -p mynetworkprinter -E -v socket://192.168.0.10:9100`
 
+### For example: Add a Serial Printer Connected Using a USB Serial Converter:
+`sudo lpadmin -p myusbserialprinter -E -v serial:/dev/ttyUSB0?baud=9600+size=8+parity=none+flow=soft`
+
 ### For example: Add a Dummy Printer:
 `sudo lpadmin -p dummy -E -v file:///dev/null`
 
