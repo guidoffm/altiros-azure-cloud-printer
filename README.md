@@ -19,16 +19,28 @@ Go to the Node.js® web site https://nodejs.org and follow the installation rule
 ### For example: Add a Dummy Printer:
 `sudo lpadmin -p dummy -E -v file:///dev/null`
 
-## Create a user
+## Run the Service with Docker
+
+`docker run -d \
+-e sbConnectionString="Endpoint=sb://xxxxxxxxxxxxxxxx.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxxxxxxxxx=" \
+-e queueName=standarddrucker \
+-e printer='http://localhost:631/printers/dummy' \
+--restart always \
+--name altiros-azure-cloud-printer-standarddrucker \
+altiros/rpi-altiros-azure-cloud-printer`
+
+## Run the Service without Docker
+
+### Create a user
 `sudo useradd -m cloudprn`
 
-## Login as new user
+### Login as new user
 `sudo su - cloudprn`
 
-## Install the npm package
+### Install the npm package
 `npm i altiros-azure-cloud-printer`
 
-## Create a shell script for each printer queue you want to print from
+### Create a shell script for each printer queue you want to print from
 
 For example: Create the file `/home/cloudprn/cloudprn-standard.sh`
 
@@ -49,11 +61,11 @@ logfolder=/home/cloudprn/logs
 
 /usr/bin/node /home/cloudprn/node_modules/altiros-azure-cloud-printer/app.js -v >> ${logfolder}/${queueName}.log 2>&1 &
 ```
-## Make each shell script executable
+### Make each shell script executable
 
 `chmod +x /home/cloudprn/cloudprn-standard.sh`
 
-## Create a service manifest for each printer (with sudo) 
+### Create a service manifest for each printer (with sudo) 
 
 For example: Create the file `/etc/systemd/system/cloudprn-standard.service`
 
@@ -72,7 +84,7 @@ RestartSec=3
 WantedBy=multi-user.target
 ```
 
-## Enable and start the services for each printer (with sudo) 
+### Enable and start the services for each printer (with sudo) 
 
 `sudo systemctl enable cloudprn-standard`
 
