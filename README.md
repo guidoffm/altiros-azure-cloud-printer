@@ -1,8 +1,5 @@
 # Altiros Azure Cloud Printer
 
-## Install Node.js®
-
-Go to the Node.js® web site https://nodejs.org and follow the installation rules for your operating system.
 
 ## Install CUPS
 
@@ -32,6 +29,10 @@ altiros/rpi-altiros-azure-cloud-printer
 ```
 
 ## Run the Service without Docker
+
+### Install Node.js®
+
+Go to the Node.js® web site https://nodejs.org and follow the installation rules for your operating system.
 
 ### Create a user
 `sudo useradd -m cloudprn`
