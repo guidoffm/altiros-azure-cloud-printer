@@ -3,7 +3,7 @@
 
 ## Install CUPS
 
-`sudo apt-get update && sudo apt-get install cups`
+`sudo apt-get update && sudo apt-get install -y cups`
 
 ## Install all the printers you need in CUPS
 
