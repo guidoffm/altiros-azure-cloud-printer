@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  standarddrucker:
+    dns: 192.168.2.1
+    environment:
+      - printer=http://127.0.0.1:631/printers/p1
+      - queueName=standarddrucker
+      - sbConnectionString=Endpoint=sb://xxxxxxx.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxx
+    image: altiros/rpi-altiros-azure-cloud-printer
+    network_mode: host
+    restart: always
